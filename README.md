@@ -1,4 +1,4 @@
-# automation
+# automation scripts
 my automation bash scripts
 
 getoptsPing.sh - скрипт демонстрирует использование функции getopts для обработки аргументов командной строки на примере параметров для команды ping
