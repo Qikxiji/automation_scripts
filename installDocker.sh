@@ -39,7 +39,14 @@ sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plug
 
 
 #ADD SERVICE CHECK systemctl is-active docker.service
-#......
+sleep 5
+if systemctl is-active docker.service > /dev/null;
+then
+  echo "Docker daemon is enabled"
+else
+  echo "Daemon off, reloading..."
+  systemctl reload-or-restart docker.service
+fi
 
 
 #Test installation
